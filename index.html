@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="vendor/css/windows.css">
+    <link rel="icon" type="image/png" href="vendor/assets/windows-logo.png">
+
+    <title>Windows 10 - 20H2</title>
+    
+</head>
+<body onload="time()">
+
+  <main class="container">
+    <h2>teste</h2>
+      <div class="barraDeTarefas">
+        
+        <div class="barraDeTarefas-Esquerda">
+          <div class="iniciar" title="Iniciar">
+            <div class="menuIniciar">
+              <div class="menuIniciar_acessoRapido"></div>
+              <div class="menuIniciar_programas">
+                <ul>
+                  <li>Adicionados recentemente</li>
+                  <li>Python 3.9 Module Docs (64-Bit)</li>
+                  <li>IDLE (Python 3.9 64-bit)</li>
+                  <li>Python 3.9 Manuals (64-bit)</li>
+                  <li>Python 3.9 (64-bit)</li>
+                </ul>
+              </div>
+              <div class="menuIniciar_blocos">
+                <div class="blocos_esquerda">
+                  <div class="grupo_blocos">
+                    <span class="bloco-titulo" contenteditable>Design</span>
+                    <div class="blocos">
+                      <div class="blocos_blocos"></div>
+                      <div class="blocos_blocos"></div>
+                      <div class="blocos_blocos"></div>
+                    </div>
+                  </div>
+
+                  <div class="grupo_blocos">
+                    <span class="bloco-titulo" contenteditable>Developer</span>
+                    <div class="blocos">
+                      <div class="blocos_blocos"></div>
+                      <div class="blocos_blocos"></div>
+                      <div class="blocos_blocos"></div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="blocos_direita"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="barraDeTarefas-Direita">
+          
+          <div class="iconesOcultos" title="Mostrar ícones ocultos">
+            <div class="mostrarIconesOcultos">teste</div>
+          </div>
+          
+          <div class="rede"></div>
+          
+          <div class="som" title="Sem som"></div>
+          
+          <div class="dataHora">
+            <div id="hora"></div>
+            <div id="data"></div>
+          </div>
+          
+          <div class="notificacoes" title="Não há notificações novas"></div>
+          
+          <div class="mostrarAreaDeTrabalho"></div>
+        </div>
+
+      </div>
+    </main>
+
+    <script>
+      function time(){
+        hoje     = new Date();
+        dia      = hoje.getDate();
+        mes      = hoje.getMonth();
+        ano      = hoje.getFullYear();
+        hora     = hoje.getHours();
+        minutos  = hoje.getMinutes();
+        segundos = hoje.getSeconds();
+        pegaHora = document.getElementById("hora");
+        pegaData = document.getElementById("data");
+        pegaData.innerHTML = dia + "/" + mes + "/" + ano;
+        pegaHora.innerHTML = hora + ":" + minutos + ":" + segundos;
+        setTimeout('time()', 500);
+      }
+    </script>
+    
+</body>
+</html>
