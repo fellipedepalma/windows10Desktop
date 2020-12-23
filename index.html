@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="vendor/css/windows.css">
+    <link rel="stylesheet" href="vendor/css/barradetarefas.css">
+
     <link rel="icon" type="image/png" href="vendor/assets/windows-logo.png">
 
     <title>Windows 10 - 20H2</title>
@@ -13,7 +15,10 @@
 <body onload="time()">
 
   <main class="container">
-    <h2>teste</h2>
+    <span>
+      <img src="./vendor/assets/icones_desktop/Lixeira_vazia_64x64.png" alt="Lixeira Vazia">
+    </span>
+    
       <div class="barraDeTarefas">
         
         <div class="barraDeTarefas-Esquerda">
@@ -79,22 +84,8 @@
       </div>
     </main>
 
-    <script>
-      function time(){
-        hoje     = new Date();
-        dia      = hoje.getDate();
-        mes      = hoje.getMonth();
-        ano      = hoje.getFullYear();
-        hora     = hoje.getHours();
-        minutos  = hoje.getMinutes();
-        segundos = hoje.getSeconds();
-        pegaHora = document.getElementById("hora");
-        pegaData = document.getElementById("data");
-        pegaData.innerHTML = dia + "/" + mes + "/" + ano;
-        pegaHora.innerHTML = hora + ":" + minutos + ":" + segundos;
-        setTimeout('time()', 500);
-      }
-    </script>
+    <script src="vendor/js/dataHora.js"></script>
+    <script src="vendor/js/conexaoRede.js"></script>
     
 </body>
 </html>
