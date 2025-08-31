@@ -1,0 +1,188 @@
+.barraDeTarefas{
+    width: 100vw;
+    height: 45px;
+    /* box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.5); */
+    box-shadow: inset 0 0 0 3000px rgba(5, 40, 70, 0.8);
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    overflow: hidden;
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+  }
+
+  .iniciar{
+    width: 48px;
+    height: 45px;
+    padding: 0.6rem 1rem;
+    background: none;
+    background-image: url("../assets/windows-logo.png");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    transition: width 5s;
+    border: none
+  }
+  .iniciar:hover {
+    background-color: rgba( 255, 255, 255, 0.1);
+    background-image: url("../assets/windows-logo-blue.png");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .iniciar:hover .menuIniciar {
+    visibility: visible;
+    
+  }
+
+  .menuIniciar{
+    position: relative;
+    visibility: hidden;
+    bottom: 71vh;
+    left: -16px;
+    width: 50.6vw;
+    height: 70vh;
+    box-shadow: inset 0 0 0 3000px rgba(30, 96, 146, 0.8);
+    display: flex;
+    padding-top: 0.8rem;
+    backdrop-filter: blur(10px);
+    transition: width 5s;
+  }
+
+  .menuIniciar_acessoRapido{
+    width: 5%;
+    /* background-color: rgba( 255, 255, 255, 0.1); */
+  }
+  .menuIniciar_programas ul li{
+    display: block;
+    font-size: 0.75rem;
+    /* background-color:  rgba( 255, 255, 255, 0.1); */
+    padding: 8px;
+    margin-bottom: 2px;
+  }
+
+  .menuIniciar_programas{
+    width: 26.2%;
+    margin-left: .8rem;
+    /* background-color: rgba( 255, 255, 255, 0.1); */
+  }
+
+  .menuIniciar_blocos{
+    width: 66%;
+    margin-left: .8rem;
+    /* background-color: rgba( 255, 255, 255, 0.1); */
+    display: flex;
+  }
+  .blocos_esquerda{
+    margin-right: 10px;
+  }
+
+  .blocos_esquerda, .blocos_direita{
+    width: 49%;
+  }
+
+  .grupo_blocos:not(:first-child){
+    margin-top: 1rem;
+  }
+
+  .bloco-titulo{
+    display: block;
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+    padding: 8px;
+  }
+
+  .blocos{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .blocos_blocos{
+    min-width: 32%;
+    height: 100px;
+
+    background-color: rgba( 255, 255, 255, 0.1);
+  }
+  .blocos_blocos:not(:first-child){
+    margin-left:5px;
+  }
+
+
+  .barraDeTarefas-Direita{
+    display: flex;
+  }
+
+
+  .iconesOcultos{
+    background-image: url("../assets/setas/seta_up_16x16.png");
+    position: relative;
+  }
+
+  .mostrarIconesOcultos{
+    width: 100px;
+    height: 100px;
+    visibility: hidden;
+    background-color: tomato;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    right: 50%;
+  }
+
+  .iconesOcultos:hover .mostrarIconesOcultos{
+    visibility: visible;
+  }
+
+  .rede{
+    background-image: url("../assets/rede/Wlan_100_20x20.png");
+    margin-right: 2px;
+  }
+  .som{
+    background-image: url("../assets/volume/volume_mudo_20x20.png");
+  }
+
+  .iconesOcultos, 
+  .rede,
+  .som{
+    width: 23px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+  }
+
+  .dataHora{
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .notificacoes{
+    width: 39px;
+    height: 45px;
+    margin-right: 0.5rem;
+    background-image: url("../assets/notificacao/notificacao_vazia_20x20.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px;
+  }
+
+  .mostrarAreaDeTrabalho{
+    width: 5px;
+    height: 45px;
+    border-left: 1px solid rgba(255,255,255,0.4);
+  }
+
+/* Em barradetarefas.css */
+.iconesOcultos:hover,
+.rede:hover,
+.som:hover,
+.notificacoes:hover,
+.dataHora:hover,
+.mostrarAreaDeTrabalho:hover,
+.menuIniciar_programas ul li:hover {
+  background-color: rgba( 255, 255, 255, 0.15);
+}
